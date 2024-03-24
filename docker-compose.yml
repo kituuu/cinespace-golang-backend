@@ -1,0 +1,19 @@
+version: '1.0'
+
+networks:
+  cinespace_network:
+    name: cinespace_network
+    driver: bridge
+    external: true
+
+services:
+  golang_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cine-golang-backend
+    image: cine-golang
+    expose:
+      - "10000"
+    networks:
+      - cinespace_network

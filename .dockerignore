@@ -1,0 +1,5 @@
+.dockerignore
+.gitignore
+sample.env
+Dockerfile
+Makefile
